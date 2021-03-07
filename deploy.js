@@ -2,9 +2,12 @@ const HDWalletProvider = require('truffle-hdwallet-provider');
 const Web3 = require('web3');
 const { contract_interface, bytecode } = require('./compile');
 
+const MNEMONIC = 'YOUR_MNEMONIC';
+const INFURA_API_LINK = 'YPUR_INFURA_API_LINK'
+
 const provider = new HDWalletProvider(
-    'tip syrup pluck ordinary tiger buyer tone make cloth hand balcony assault',
-    'https://rinkeby.infura.io/v3/610c381831624a4aaee21f384076612f'
+    MNEMONIC,
+    INFURA_API_LINK
 );
 const web3 = new Web3(provider);
 
